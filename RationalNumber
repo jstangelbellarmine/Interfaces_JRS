@@ -2,7 +2,7 @@
 //RationalNumber.java       Java Foundations
 //
 //Represents one rational number with a numerator and denominator.
-//The first part of this code was given to me as starter asnd is not my own. 
+//The first part of this code was given to me as starter and is not my own. 
 //********************************************************************
 
 public class RationalNumber
@@ -165,14 +165,14 @@ private int gcd(int num1, int num2)
 }
  
 //-----------------------------------------------------------------
-//In theory, this method compares the absolute value (the difference
+//This method compares the absolute value (the difference
 //between two numbers expressed as a positive number) and uses an if-
-//statement to return 0, -1, or 1. My code I believe only returns 0.
+//statement to return 0, -1, or 1.
 //-----------------------------------------------------------------
     public int compareTo(RationalNumber secondRational)
     {
-    	double rationalOne=(double)(numerator / denominator);
-    	double rationalTwo=(double)(secondRational.numerator / secondRational.denominator);
+    	double rationalOne=(double)numerator / denominator;
+    	double rationalTwo=(double)secondRational.numerator / secondRational.denominator;
     	
     	if (Math.abs(rationalOne - rationalTwo) < TOLERANCE)
     		
