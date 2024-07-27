@@ -1,0 +1,66 @@
+public class Application
+
+{
+    //-----------------------------------------------------------------
+    //  Tests the Comparable nature of RationalNumber objects.
+	//	This first section creates the rational numbers needed for comparison.
+    //-----------------------------------------------------------------
+
+	public static void main(String[] args)
+    {
+	
+        RationalNumber r1 = new RationalNumber(6, 8);
+        RationalNumber r2 = new RationalNumber(1, 3);
+        System.out.println("First rational number: " + r1);
+        System.out.println("Second rational number: " + r2);
+
+
+        RationalNumber r3 = new RationalNumber(6, 7);
+        RationalNumber r4 = new RationalNumber(6, 7);
+        System.out.println("Third rational number: " + r3);
+        System.out.println("Fourth rational number: " + r4);
+        
+
+        
+        RationalNumber r5 = new RationalNumber(4, 7);
+        RationalNumber r6 = new RationalNumber(5, 6);
+        System.out.println("Fifth rational number: " + r5);
+        System.out.println("Sixth rational number: " + r6);
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//The following implementation of the compareTo method 
+//in theory creates 3 comparisons, one each for r1 and r2, 
+//r3 and r4, and r5 and r6, respectively. My code is 
+//reading the returned result of the method of 0.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~        
+        
+        int comparison = r1.compareTo(r2);
+        if (comparison == 0)
+        System.out.println("r1 and r2 are equal.");
+        	else if (comparison < 0)
+        	System.out.println("r1 is less than r2.");
+        		else
+        		System.out.println("r1 is greater than r2.");
+        
+        int comparison2 = r3.compareTo(r4);
+        if (comparison2 == 0)
+        System.out.println("r3 and r4 are equal.");        
+        	else if (comparison2 < 0)
+        	System.out.println("r3 is less than r4");       
+        		else     
+        		System.out.println("r3 is greater than r4");
+        
+
+        int comparison3 = r5.compareTo(r6);
+
+        if (comparison3 == 0)
+        System.out.println("r5 and r6 are equal.");
+        	else if (comparison3 < 0)
+            System.out.println("r5 is less than r6");
+        		else
+        		System.out.println("r5 is greater than r6");
+        
+    }//end main
+    
+}//end class
+
