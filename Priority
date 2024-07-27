@@ -1,0 +1,9 @@
+public interface Priority {
+	
+	public  final static int MIN_PRIORITY = 1;
+	public  final static int MED_PRIORITY = 5;
+	public final static int MAX_PRIORITY = 10;
+	
+	public void setPriority(int importance);
+	public void getPriority();
+}
