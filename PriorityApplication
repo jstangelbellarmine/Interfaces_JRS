@@ -1,0 +1,61 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//This class tests the Priority interface. In this section,
+//I created 4 objects: two Tasks and two Processes.
+//I set the required parameters for each object.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+public class PriorityApplication {
+    public static void main(String[] args) {
+        // Create Task and Process objects
+        Task task1 = new Task();
+        task1.setName("Task 1");
+        task1.setPriority(Priority.MAX_PRIORITY);
+        task1.setStatus(Task.Status.IN_PROCESS);
+
+        Task task2 = new Task();
+        task2.setName("Task 2");
+        task2.setPriority(Priority.MED_PRIORITY);
+        task2.setStatus(Task.Status.NOT_STARTED);
+
+        Process process1 = new Process("Process 1");
+        process1.setPriority(Priority.MIN_PRIORITY);
+
+        Process process2 = new Process("Process 2");
+        process2.setPriority(Priority.MED_PRIORITY);
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//This section makes four comparisons:
+//1) Two comparisons comparing Task  to Process
+//2) One comparison comparing Task  to Task
+//3) One comparison comparing Process to Process
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        comparePriority(task1, process1);
+        comparePriority(task2, process2);
+        
+        
+        comparePriority(task1, task2); 
+        comparePriority(process1, process2);
+    }
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//This method compares the aforementioned objects and 
+//produces a statement measuring which Task/Process object
+//has priority.
+//The output is in toString format. I tried making 
+//the output easier to read but I couldn't figure it out. 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    public static void comparePriority(Priority p1, Priority p2) {
+        int comparison = Integer.compare(p1.getPriority(), p2.getPriority());
+        if (comparison > 0) {
+            System.out.println(p1 + " has a higher priority than " + p2);
+        } else if (comparison < 0) {
+            System.out.println(p1 + " has a lower priority than " + p2);
+        } else {
+            System.out.println(p1 + " and " + p2 + " have equal priority.");
+        }//end comparePriority Method
+        
+    }//end main
+    
+}//end class
