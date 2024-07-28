@@ -60,6 +60,6 @@ public class Task implements Priority, Comparable<Task> {
 	public String toString() {
 		return "Task [name=" + name + ", priority=" + priority + ", status=" + status + ", getName()=" + getName()
 				+ ", getPriority()=" + getPriority() + ", getStatus()=" + getStatus() + "]";
-	}
+	}//end toString
 	
-}
+}//end class
