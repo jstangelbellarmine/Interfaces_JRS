@@ -1,0 +1,50 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//This class uses two interfaces: Priority and Comparable. 
+//It summarizes all components using a toString
+//This class contains a compareTo method that allows it to be
+//compared with other Process objects or with Task objects. 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+public class Process implements Priority, Comparable<Process> {
+
+		private String processID;
+		private int priority;
+		
+		public  Process(String string)
+		{
+			this.processID= "";
+		} //end constructor
+		
+		
+		public String getProcessID() {
+			return processID;
+		}//end getProcessId
+		
+		public void setProcessID(String processID) {
+			this.processID = processID;
+		}//end setProcessID
+		
+		
+		public int getPriority() {
+			return priority;
+		}//end getPriority
+		
+		public void setPriority(int priority) {
+			this.priority = priority;
+		}//end setPriority
+
+
+		@Override
+		public int compareTo(Process Task)
+		{
+			return Integer.compare(this.priority, Task.priority);
+		}//end compareTo. I used compareTo in this method but was told it should be Integer.compare()instead
+		
+		@Override
+		public String toString() {
+			return "Process [processID=" + processID + ", priority=" + priority + ", getProcessID()=" + getProcessID()
+					+ ", getPriority()=" + getPriority() + "]";
+		}//end toString	
+	
+}
