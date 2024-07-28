@@ -1,4 +1,6 @@
+
 public class Application
+ 
 
 {
     //-----------------------------------------------------------------
@@ -29,9 +31,8 @@ public class Application
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //The following implementation of the compareTo method 
-//in theory creates 3 comparisons, one each for r1 and r2, 
-//r3 and r4, and r5 and r6, respectively. My code is 
-//reading the returned result of the method of 0.
+//creates 3 comparisons, one each for r1 and r2, 
+//r3 and r4, and r5 and r6, respectively. 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~        
         
         int comparison = r1.compareTo(r2);
