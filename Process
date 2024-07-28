@@ -47,4 +47,4 @@ public class Process implements Priority, Comparable<Process> {
 					+ ", getPriority()=" + getPriority() + "]";
 		}//end toString	
 	
-}
+}//end class
