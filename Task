@@ -1,0 +1,65 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//This class uses two interfaces: Priority and Comparable. 
+//It summarizes all components using a toString
+//this class contains an enumerated class called Status
+//This class contains a compareTo method that allows it to be
+//compared with other Task objects or with Process objects. 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+public class Task implements Priority, Comparable<Task> {
+	
+	public enum Status 
+	{
+	NOT_STARTED, IN_PROCESS, COMPLETE;	
+	}//end enumerated class
+    
+    private String name;
+    private int priority;
+    private Status status;
+    
+    public String Task(String name)
+    {
+    	return this.name;
+    }
+    //end constructor 
+    
+	public String getName() {
+		return name;
+	}//end getName
+
+	public void setName(String name) {
+		this.name = name;
+	}//end setName
+
+	public int getPriority() {
+		return priority;
+	}//end getPriority
+	
+	public void setPriority(int priority)
+	{
+		this.priority=priority;
+	}//end setPriority
+	
+	public Task.Status getStatus() {
+		return status;
+	} //end getStatus - Eclipse suggested Task.Status here, not simply Status as I had
+	
+	public void setStatus(Status status) {
+		this.status= status;
+	}//end setStatus
+	
+	public int compareTo(Task Process)
+	{
+		return Integer.compare(this.priority, Process.priority);
+	}//end compareTo. I used compareTo in this method but was told it should be Integer.compare()instead
+	
+
+	@Override
+	public String toString() {
+		return "Task [name=" + name + ", priority=" + priority + ", status=" + status + ", getName()=" + getName()
+				+ ", getPriority()=" + getPriority() + ", getStatus()=" + getStatus() + "]";
+	}
+	
+}
