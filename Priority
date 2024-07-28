@@ -1,9 +1,14 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//In this interface I set three constant integers,
+// MIN, MED, and MAX. We also included a getter/setter.
+//This interface will be used to compare two objects.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 public interface Priority {
 	
-	public  final static int MIN_PRIORITY = 1;
-	public  final static int MED_PRIORITY = 5;
-	public final static int MAX_PRIORITY = 10;
+	 final static int MIN_PRIORITY = 1;
+	 final static int MED_PRIORITY = 5;
+	 final static int MAX_PRIORITY = 10;
 	
-	public void setPriority(int importance);
-	public void getPriority();
+	 void setPriority(int importance);
+	 int getPriority();
 }
