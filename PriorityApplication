@@ -1,11 +1,11 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //This class tests the Priority interface. In this section,
-//I created 4 objects: two Tasks and two Processes.
-//I set the required parameters for each object.
+//I created 4 objects: two tasks and two Processes.
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 public class PriorityApplication {
+	
     public static void main(String[] args) {
         // Create Task and Process objects
         Task task1 = new Task();
@@ -37,7 +37,7 @@ public class PriorityApplication {
         
         comparePriority(task1, task2); 
         comparePriority(process1, process2);
-    }
+    }//end Main
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //This method compares the aforementioned objects and 
@@ -56,6 +56,6 @@ public class PriorityApplication {
             System.out.println(p1 + " and " + p2 + " have equal priority.");
         }//end comparePriority Method
         
-    }//end main
+    }//end comparePriority
     
 }//end class
